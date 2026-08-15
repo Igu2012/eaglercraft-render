@@ -36,9 +36,9 @@ assert "LoginSecurity-Spigot-3.3.1.jar" in plugins
 assert "ViaVersion-5.11.0.jar" not in plugins
 assert "ViaBackwards-5.11.0.jar" not in plugins
 assert "ViaRewind-4.1.3.jar" not in plugins
-assert env.get("MEMORY") == "224M"
-assert env.get("INIT_MEMORY") == "96M"
-assert env.get("MAX_MEMORY") == "224M"
+assert env.get("MEMORY") == "240M"
+assert env.get("INIT_MEMORY") == "128M"
+assert env.get("MAX_MEMORY") == "240M"
 assert "MaxMetaspaceSize=112M" in env.get("JVM_OPTS", "")
 assert "MaxDirectMemorySize=64M" in env.get("JVM_OPTS", "")
 assert env.get("MALLOC_ARENA_MAX") == "2"
@@ -59,9 +59,9 @@ free_env = {
     if "key" in item
 }
 assert free_env.get("MOTD") == "Eaglercraft Survival - Free Test"
-assert free_env.get("MEMORY") == "224M"
-assert free_env.get("INIT_MEMORY") == "96M"
-assert free_env.get("MAX_MEMORY") == "224M"
+assert free_env.get("MEMORY") == "240M"
+assert free_env.get("INIT_MEMORY") == "128M"
+assert free_env.get("MAX_MEMORY") == "240M"
 assert "MaxMetaspaceSize=112M" in free_env.get("JVM_OPTS", "")
 assert "MaxDirectMemorySize=64M" in free_env.get("JVM_OPTS", "")
 assert free_env.get("MALLOC_ARENA_MAX") == "2"
