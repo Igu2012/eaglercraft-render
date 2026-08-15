@@ -2,13 +2,13 @@
 
 ## Verificar o serviço
 
-No painel do Render, consulte os logs do serviço `eaglercraft-survival`. O log deve mostrar o download do Paper, a instalação dos plugins e a mensagem de que o servidor terminou de iniciar. A porta interna deve ser a mesma informada pelo Render em `PORT`; ela é aplicada pelo `scripts/render-start.sh`.
+No painel do Render, consulte os logs do serviço `eaglercraft-survival-free` ou `eaglercraft-survival-paid`, conforme o Blueprint escolhido. O log deve mostrar o download do Paper, a instalação dos plugins e a mensagem de que o servidor terminou de iniciar. A porta interna deve ser a mesma informada pelo Render em `PORT`; ela é aplicada pelo `scripts/render-start.sh`.
 
 ## Diagnóstico de conexão
 
 Se o cliente não conectar, confira se o serviço é do tipo **Web Service**, se está saudável e se o endereço usado é o hostname HTTPS do Render. O EaglerXServer Bukkit usa o listener do Paper, portanto não há uma segunda porta pública para configurar. Em uma instância recém-suspensa, aguarde o serviço voltar ao estado disponível antes de testar novamente.
 
-Se a conexão abrir e cair durante uma atualização, isso é esperado para um serviço que reiniciou. O cliente deve reconectar. Se o erro persistir, reduza `VIEW_DISTANCE`, confira o uso de memória e valide se os dois JARs ainda correspondem às versões indicadas em `docs/plugin-checksums.txt`.
+Se a conexão abrir e cair durante uma atualização, isso é esperado para um serviço que reiniciou. O cliente deve reconectar. Se o erro persistir, reduza `VIEW_DISTANCE`, confira o uso de memória e valide se os JARs ainda correspondem às versões indicadas em `docs/plugin-checksums.txt`. O free instala apenas EaglerXServer e LoginSecurity; o paid também deve mostrar ViaVersion, ViaBackwards e ViaRewind nos logs.
 
 ## Backup
 
@@ -16,7 +16,7 @@ O backup deve incluir todo o diretório `/data`, principalmente `world/`, `world
 
 ## Atualizações
 
-Atualize uma versão por vez. Primeiro faça backup, depois altere a versão ou URL no `render.yaml`, confira a compatibilidade nas releases upstream e sincronize o Blueprint. Após o deploy, teste cadastro, login, alteração de senha e carregamento do mundo antes de permitir novos jogadores.
+Atualize uma versão por vez. Primeiro faça backup, depois altere a versão ou URL no Blueprint selecionado (`render.yaml`, `render-free.yaml` ou `render-paid.yaml`), confira a compatibilidade nas releases upstream e sincronize o Blueprint. Após o deploy, teste cadastro, login, alteração de senha e carregamento do mundo antes de permitir novos jogadores.
 
 ## Comandos de administração
 
