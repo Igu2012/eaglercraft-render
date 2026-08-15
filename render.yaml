@@ -26,7 +26,7 @@ services:
       - key: MAX_MEMORY
         value: 224M
       - key: JVM_OPTS
-        value: "-XX:+UseSerialGC -XX:ActiveProcessorCount=1 -Xss256k -XX:MaxMetaspaceSize=112M -XX:MaxDirectMemorySize=32M -XX:ReservedCodeCacheSize=16M"
+        value: "-XX:+UseSerialGC -XX:ActiveProcessorCount=1 -Xss256k -XX:MaxMetaspaceSize=112M -XX:MaxDirectMemorySize=64M -XX:ReservedCodeCacheSize=16M"
       - key: MALLOC_ARENA_MAX
         value: "2"
       - key: CLEAN_SERVER_LIBRARIES

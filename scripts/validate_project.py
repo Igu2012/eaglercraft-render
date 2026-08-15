@@ -40,7 +40,7 @@ assert env.get("MEMORY") == "224M"
 assert env.get("INIT_MEMORY") == "96M"
 assert env.get("MAX_MEMORY") == "224M"
 assert "MaxMetaspaceSize=112M" in env.get("JVM_OPTS", "")
-assert "MaxDirectMemorySize=32M" in env.get("JVM_OPTS", "")
+assert "MaxDirectMemorySize=64M" in env.get("JVM_OPTS", "")
 assert env.get("MALLOC_ARENA_MAX") == "2"
 assert env.get("USE_AIKAR_FLAGS") == "false"
 assert env.get("CLEAN_SERVER_LIBRARIES") == "false"
@@ -63,7 +63,7 @@ assert free_env.get("MEMORY") == "224M"
 assert free_env.get("INIT_MEMORY") == "96M"
 assert free_env.get("MAX_MEMORY") == "224M"
 assert "MaxMetaspaceSize=112M" in free_env.get("JVM_OPTS", "")
-assert "MaxDirectMemorySize=32M" in free_env.get("JVM_OPTS", "")
+assert "MaxDirectMemorySize=64M" in free_env.get("JVM_OPTS", "")
 assert free_env.get("MALLOC_ARENA_MAX") == "2"
 assert free_env.get("USE_AIKAR_FLAGS") == "false"
 assert free_env.get("CLEAN_SERVER_LIBRARIES") == "false"
