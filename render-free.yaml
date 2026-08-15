@@ -20,15 +20,15 @@ services:
       - key: PAPER_CHANNEL
         value: default
       - key: MEMORY
-        value: 240M
+        value: 256M
       - key: INIT_MEMORY
         value: 128M
       - key: MAX_MEMORY
-        value: 240M
+        value: 256M
       - key: JVM_OPTS
-        value: "-XX:+UseSerialGC -XX:ActiveProcessorCount=1 -Xss256k -XX:MaxMetaspaceSize=112M -XX:MaxDirectMemorySize=64M -XX:ReservedCodeCacheSize=16M"
+        value: "-XX:+UseSerialGC -XX:ActiveProcessorCount=1 -Xss192k -XX:MaxMetaspaceSize=96M -XX:MaxDirectMemorySize=48M -XX:ReservedCodeCacheSize=12M"
       - key: MALLOC_ARENA_MAX
-        value: "2"
+        value: "1"
       - key: CLEAN_SERVER_LIBRARIES
         value: "false"
       - key: ONLINE_MODE
