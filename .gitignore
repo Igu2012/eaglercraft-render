@@ -1,0 +1,16 @@
+local-data/
+data/
+logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.secret
+.env
+.env.*
+!.env.example
+.gradle/
+build/
+out/
+__pycache__/
+.DS_Store

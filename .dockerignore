@@ -1,0 +1,10 @@
+local-data
+data
+logs
+.git
+.gitignore
+*.db
+*.sqlite
+*.sqlite3
+*.log
+.env

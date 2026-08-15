@@ -1,0 +1,13 @@
+server_name = "Eaglercraft Survival"
+eagler_login_timeout = 10000
+http_websocket_compression_level = 6
+http_websocket_fragment_size = 65536
+http_websocket_max_frame_length = 131071
+enable_is_eagler_player_property = true
+
+[update_checker]
+enable_update_checker = false
+check_for_update_every = -1
+
+[voice_service]
+enable_voice_service = false

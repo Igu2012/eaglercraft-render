@@ -1,0 +1,68 @@
+services:
+  - type: web
+    name: eaglercraft-survival-free-test
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    numInstances: 1
+    autoDeployTrigger: commit
+
+    envVars:
+      - key: EULA
+        value: "TRUE"
+      - key: TYPE
+        value: PAPER
+      - key: VERSION
+        value: "1.12.2"
+      - key: PAPER_BUILD
+        value: "1620"
+      - key: PAPER_CHANNEL
+        value: default
+      - key: MEMORY
+        value: 224M
+      - key: INIT_MEMORY
+        value: 96M
+      - key: MAX_MEMORY
+        value: 224M
+      - key: JVM_OPTS
+        value: "-XX:+UseSerialGC -XX:ActiveProcessorCount=1 -Xss256k -XX:MaxMetaspaceSize=112M -XX:MaxDirectMemorySize=32M -XX:ReservedCodeCacheSize=16M"
+      - key: MALLOC_ARENA_MAX
+        value: "2"
+      - key: CLEAN_SERVER_LIBRARIES
+        value: "false"
+      - key: ONLINE_MODE
+        value: "false"
+      - key: ENABLE_RCON
+        value: "false"
+      - key: ENABLE_AUTOPAUSE
+        value: "false"
+      - key: ENABLE_AUTOSTOP
+        value: "false"
+      - key: USE_AIKAR_FLAGS
+        value: "false"
+      - key: MODE
+        value: survival
+      - key: DIFFICULTY
+        value: normal
+      - key: PVP
+        value: "true"
+      - key: MAX_PLAYERS
+        value: "20"
+      - key: VIEW_DISTANCE
+        value: "6"
+      - key: SPAWN_PROTECTION
+        value: "0"
+      - key: ALLOW_FLIGHT
+        value: "true"
+      - key: ENABLE_COMMAND_BLOCK
+        value: "true"
+      - key: MOTD
+        value: "Eaglercraft Survival - Free Test"
+      - key: PLUGINS
+        value: |
+          https://github.com/lax1dude/eaglerxserver/releases/download/v1.1.1/EaglerXServer.jar
+          https://github.com/lenis0012/LoginSecurity/releases/download/v3.3.1/LoginSecurity-Spigot-3.3.1.jar
+          https://github.com/ViaVersion/ViaVersion/releases/download/5.11.0/ViaVersion-5.11.0.jar
+          https://github.com/ViaVersion/ViaBackwards/releases/download/5.11.0/ViaBackwards-5.11.0.jar
+          https://github.com/ViaVersion/ViaRewind/releases/download/4.1.3/ViaRewind-4.1.3.jar

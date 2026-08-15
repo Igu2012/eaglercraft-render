@@ -1,0 +1,21 @@
+Plugins fixados no render.yaml
+
+EaglerXServer v1.1.1
+URL: https://github.com/lax1dude/eaglerxserver/releases/download/v1.1.1/EaglerXServer.jar
+SHA-256: 468cb07eb7ca466b21b439be75156d3d01579327f4c6dae5b67d471137a64208
+
+LoginSecurity v3.3.1
+URL: https://github.com/lenis0012/LoginSecurity/releases/download/v3.3.1/LoginSecurity-Spigot-3.3.1.jar
+SHA-256: 4dc2d19d81a0577230c0b3c06a9563c7c9aceb44acc19604770ec9d7bfc6903a
+
+ViaVersion v5.11.0
+URL: https://github.com/ViaVersion/ViaVersion/releases/download/5.11.0/ViaVersion-5.11.0.jar
+SHA-256: 18d19e90fc9467d68128c076630ae8700449c901402a3ef421837ce006bc8cae
+
+ViaBackwards v5.11.0
+URL: https://github.com/ViaVersion/ViaBackwards/releases/download/5.11.0/ViaBackwards-5.11.0.jar
+SHA-256: b21983d561e3f92df257683f0133ab6c68ec68175e8acfd82c6231723bf83587
+
+ViaRewind v4.1.3
+URL: https://github.com/ViaVersion/ViaRewind/releases/download/4.1.3/ViaRewind-4.1.3.jar
+SHA-256: 2d5970d22b4711c9ab2800932326c7b08acdace25ed7c6bbb8f6ea81054962b4
