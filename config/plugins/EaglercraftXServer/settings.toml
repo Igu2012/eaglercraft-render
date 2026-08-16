@@ -1,6 +1,6 @@
 server_name = "Eaglercraft Survival"
 eagler_login_timeout = 10000
-http_websocket_compression_level = 6
+http_websocket_compression_level = 1
 http_websocket_fragment_size = 65536
 http_websocket_max_frame_length = 131071
 enable_is_eagler_player_property = true

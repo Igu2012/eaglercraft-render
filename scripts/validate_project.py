@@ -44,6 +44,8 @@ assert "MaxDirectMemorySize=48M" in env.get("JVM_OPTS", "")
 assert env.get("MALLOC_ARENA_MAX") == "1"
 assert env.get("USE_AIKAR_FLAGS") == "false"
 assert env.get("CLEAN_SERVER_LIBRARIES") == "false"
+assert env.get("MAX_PLAYERS") == "8"
+assert env.get("VIEW_DISTANCE") == "4"
 
 free_services = free_blueprint.get("services")
 assert isinstance(free_services, list) and free_services, "render-free.yaml precisa conter um serviço"
@@ -62,6 +64,8 @@ assert free_env.get("MOTD") == "Eaglercraft Survival - Free Test"
 assert free_env.get("MEMORY") == "256M"
 assert free_env.get("INIT_MEMORY") == "128M"
 assert free_env.get("MAX_MEMORY") == "256M"
+assert free_env.get("MAX_PLAYERS") == "8"
+assert free_env.get("VIEW_DISTANCE") == "4"
 assert "MaxMetaspaceSize=96M" in free_env.get("JVM_OPTS", "")
 assert "MaxDirectMemorySize=48M" in free_env.get("JVM_OPTS", "")
 assert free_env.get("MALLOC_ARENA_MAX") == "1"
@@ -101,7 +105,7 @@ with (ROOT / "config/plugins/EaglercraftXServer/settings.toml").open("rb") as ha
 with (ROOT / "config/plugins/EaglercraftXServer/listener.toml").open("rb") as handle:
     listener = tomllib.load(handle)
 assert settings["server_name"] == "Eaglercraft Survival"
-assert settings["http_websocket_compression_level"] == 6
+assert settings["http_websocket_compression_level"] == 1
 assert listener["dual_stack"] is True
 assert listener["forward_ip_header"] == "X-Forwarded-For"
 
