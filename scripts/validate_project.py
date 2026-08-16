@@ -104,10 +104,22 @@ with (ROOT / "config/plugins/EaglercraftXServer/settings.toml").open("rb") as ha
     settings = tomllib.load(handle)
 with (ROOT / "config/plugins/EaglercraftXServer/listener.toml").open("rb") as handle:
     listener = tomllib.load(handle)
+with (ROOT / "config/bukkit.yml").open(encoding="utf-8") as handle:
+    bukkit = yaml.safe_load(handle)
+with (ROOT / "config/spigot.yml").open(encoding="utf-8") as handle:
+    spigot = yaml.safe_load(handle)
 assert settings["server_name"] == "Eaglercraft Survival"
 assert settings["http_websocket_compression_level"] == 1
 assert listener["dual_stack"] is True
 assert listener["forward_ip_header"] == "X-Forwarded-For"
+assert bukkit["spawn-limits"] == {"monsters": 35, "animals": 8, "water-animals": 3, "ambient": 1}
+assert bukkit["ticks-per"]["monster-spawns"] == 20
+assert bukkit["ticks-per"]["animal-spawns"] == 400
+spigot_default = spigot["world-settings"]["default"]
+assert spigot_default["mob-spawn-range"] == 4
+assert spigot_default["entity-activation-range"] == {"animals": 16, "monsters": 24, "misc": 8, "tick-inactive-villagers": False}
+assert spigot_default["ticks-per"]["hopper-transfer"] == 8
+assert spigot_default["nerf-spawner-mobs"] is False
 
 for required in (
     "Dockerfile",
@@ -115,6 +127,8 @@ for required in (
     "render-free.yaml",
     "scripts/render-start.sh",
     "config/server.properties",
+    "config/bukkit.yml",
+    "config/spigot.yml",
     "config/plugins/EaglercraftXServer/settings.toml",
     "config/plugins/EaglercraftXServer/listener.toml",
 ):
